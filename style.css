@@ -17,7 +17,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: var(--dark-text);
     background: linear-gradient(135deg, var(--primary-yellow) 0%, #f8f8f8 100%);
-    overflow-x: hidden; /* تم إضافة هذه الخاصية لمنع التمرير الأفقي */
+    overflow-x: hidden;
 }
 
 /* Navbar for Desktop */
@@ -143,7 +143,7 @@ body {
 
 .navbar-mobile nav a:not(.active):hover {
     transform: translateY(-2px);
-    box-shadow: 4px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 
 .navbar-mobile nav a.active {
@@ -298,20 +298,23 @@ body {
 
 /* Reservation Form */
 .reservation-form-container {
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
-    box-shadow: none;
-    background-color: transparent;
-    border-radius: 0;
 }
 
 .form-card {
-    padding: 30px;
-    background: #fff;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
     border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #eee;
+}
+
+.form-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .reservation-form {
@@ -966,57 +969,31 @@ body {
     }
     .navbar-mobile {
         display: flex;
-        background: linear-gradient(to bottom, var(--primary-yellow), rgba(253, 200, 63, 0));
-        box-shadow: none;
     }
     .hero-section {
         flex-direction: column;
         padding-top: 80px;
         min-height: auto;
     }
-    
     .content-left {
-        width: 100%;
-        padding: 30px 20px;
+        padding: 40px 20px;
         text-align: center;
         order: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        padding-top: 20px;
     }
-    
     .content-left h1 {
-        font-size: 36px;
+        font-size: 48px;
     }
-    
     .content-left p {
         font-size: 16px;
         max-width: 100%;
     }
-
-    .content-center {
-        padding: 30px 20px;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .content-center h1 {
-        font-size: 36px;
-    }
-    
-    .content-center p {
-        font-size: 16px;
-        max-width: 100%;
-    }
-
     .image-right {
         order: 1;
         min-height: auto;
         padding: 20px;
         justify-content: center;
     }
-
     .image-right img {
         width: 100%;
         height: auto;
@@ -1028,15 +1005,11 @@ body {
         gap: 20px;
     }
     .menu-card {
-        width: 45%;
+        width: 100%;
         max-width: 300px;
     }
     .card-content h3 {
         font-size: 14px;
-        /* تم التأكد من وجود هذه الخصائص لمنع النص من الخروج */
-        white-space: nowrap; 
-        overflow: hidden; 
-        text-overflow: ellipsis;
     }
     .rating {
         font-size: 9px;
@@ -1053,49 +1026,38 @@ body {
         right: 5px;
         gap: 3px;
     }
+    .quantity-control, .delete-icon {
+        width: 18px;
+        height: 18px;
+        font-size: 11px;
+    }
     .notification {
         bottom: 70px;
         right: 10px;
         font-size: 14px;
     }
-    
     .reservation-form-container {
-        max-width: 100%;
-        padding: 0 15px;
-        box-shadow: none;
-        background-color: transparent;
-        border-radius: 0;
+        padding: 15px;
+        max-width: 90%;
     }
-
     .form-card {
         padding: 20px;
-        box-shadow: none;
-        background-color: transparent;
-        border: none;
     }
-    
     .form-row {
         flex-direction: column;
         gap: 15px;
     }
-    
-    .form-group {
-        width: 100%;
-        min-width: unset;
-    }
-
-    .form-group label {
-        font-size: 16px;
-    }
-
     .form-group input {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .btn-submit {
         padding: 12px;
         font-size: 16px;
     }
-    
-    .btn-submit {
-        padding: 15px;
-        font-size: 18px;
-        width: 100%;
+
+    /* تم تعديل هذا الجزء ليتناسب مع الهاتف */
+    .about-us {
+        padding: 30px 20px; /* تم تقليل المسافة الداخلية لتبدو أفضل على الهاتف */
     }
 }
