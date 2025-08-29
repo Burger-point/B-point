@@ -966,39 +966,57 @@ body {
     }
     .navbar-mobile {
         display: flex;
-        /* Updated for smooth color transition */
         background: linear-gradient(to bottom, var(--primary-yellow), rgba(253, 200, 63, 0));
-        box-shadow: none; /* Removed the box shadow to avoid a hard line */
+        box-shadow: none;
     }
     .hero-section {
         flex-direction: column;
         padding-top: 80px;
         min-height: auto;
     }
+    
     .content-left {
-        padding: 40px 20px;
+        width: 100%;
+        padding: 30px 20px;
         text-align: center;
         order: 2;
-        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+    
+    .content-left h1 {
+        font-size: 36px;
+    }
+    
+    .content-left p {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
     .content-center {
         padding: 30px 20px;
         text-align: center;
         width: 100%;
     }
+    
     .content-center h1 {
         font-size: 36px;
     }
+    
     .content-center p {
         font-size: 16px;
         max-width: 100%;
     }
+
     .image-right {
         order: 1;
         min-height: auto;
         padding: 20px;
         justify-content: center;
     }
+
     .image-right img {
         width: 100%;
         height: auto;
@@ -1030,11 +1048,6 @@ body {
         top: 5px;
         right: 5px;
         gap: 3px;
-    }
-    .quantity-control, .delete-icon {
-        width: 18px;
-        height: 18px;
-        font-size: 11px;
     }
     .notification {
         bottom: 70px;
