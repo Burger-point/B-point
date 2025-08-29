@@ -17,7 +17,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: var(--dark-text);
     background: linear-gradient(135deg, var(--primary-yellow) 0%, #f8f8f8 100%);
-    overflow-x: hidden;
+    overflow-x: hidden; /* تم إضافة هذه الخاصية لمنع التمرير الأفقي */
 }
 
 /* Navbar for Desktop */
@@ -1033,6 +1033,10 @@ body {
     }
     .card-content h3 {
         font-size: 14px;
+        /* تم التأكد من وجود هذه الخصائص لمنع النص من الخروج */
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis;
     }
     .rating {
         font-size: 9px;
